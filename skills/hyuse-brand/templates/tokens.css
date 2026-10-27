@@ -1,0 +1,52 @@
+/*
+ * {Brand name} tokens, generated from brand/BRAND.md v{version}.
+ * Three layers. Components read component or semantic tokens only,
+ * never primitives and never raw hex.
+ */
+
+:root {
+  /* Primitive: raw values, named by what they are */
+  --cream-50: #;
+  --cream-100: #;
+  --charcoal-900: #;
+  --charcoal-600: #;
+  --rust-600: #;
+  --green-700: #;
+  --amber-700: #;
+  --red-700: #;
+  --blue-700: #;
+
+  /* Semantic: named by job, matches BRAND.md section 2 */
+  --paper: var(--cream-50);
+  --paper-alt: var(--cream-100);
+  --ink: var(--charcoal-900);
+  --ink-muted: var(--charcoal-600);
+  --rule: ;
+  --accent: var(--rust-600);
+  --on-accent: ;
+  --success: var(--green-700);
+  --warning: var(--amber-700);
+  --danger: var(--red-700);
+  --info: var(--blue-700);
+
+  --font-display: "{Display family}", {fallback stack};
+  --font-text: "{Text family}", {fallback stack};
+
+  --shadow-paper: none;
+  --rule-width: 1px;
+  --radius-base: ;
+  --focus-ring: 2px solid var(--accent);
+
+  /* Component: built from semantic tokens only */
+  --button-bg: var(--accent);
+  --button-fg: var(--on-accent);
+  --card-bg: var(--paper-alt);
+  --card-border: var(--rule-width) solid var(--rule);
+  --nav-bg: var(--paper);
+  --input-bg: var(--paper);
+  --input-border: var(--rule-width) solid var(--rule);
+}
+
+/* Only when BRAND.md defines a dark palette. Values set on their own, not inverted. */
+[data-theme="dark"] {
+}
